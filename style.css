@@ -46,7 +46,7 @@ section{
  cursor: pointer;
  margin-top: 1rem;
  font-size: 2rem;
- border-radius: 3rem;
+ border-radius: .5rem;
 }
 .btn i{
 padding: 0 .5rem;
