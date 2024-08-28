@@ -310,6 +310,7 @@ align-items: center;
 font-size: 2rem;
 color: #eee;
 padding: 1rem 0;
+text-transform: lowercase;
 font-weight: normal;
 }
 .info1 h3 i{
