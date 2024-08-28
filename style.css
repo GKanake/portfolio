@@ -249,10 +249,9 @@ padding: 2rem 2rem;
 .box2{
 height: 100%;
 width: 100%;
-border-radius: 1rem;
+border-radius: 1rem 1rem;
 margin: 2rem;
 overflow: hidden;
-cursor: pointer;
 }
 .box2 img{
  height: 100%;
