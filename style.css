@@ -432,8 +432,8 @@ width: 100%;
   
   /* Modal image */
   .modal-content {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 105%;
+    max-height: 105%;
     border-radius: 8px;
     cursor: grab; /* Shows grabbing hand cursor */
     margin: auto; 
