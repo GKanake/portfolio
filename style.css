@@ -416,7 +416,7 @@ width: 100%;
   
   /* Modal background */
   .modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -427,15 +427,15 @@ width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden; /* Prevents modal from overflowing */
   }
   
   /* Modal image */
   .modal-content {
-    max-width: 110%;
-    max-height: 110%;
+    max-width: 90%;
+    max-height: 90%;
     border-radius: 8px;
-    display: block;
-    margin: auto; /* Ensure it is centered horizontally */
+    cursor: grab; /* Shows grabbing hand cursor */
   }
   
   /* Close button */
@@ -448,5 +448,6 @@ width: 100%;
     font-weight: bold;
     cursor: pointer;
   }
+  
   
   
