@@ -23,17 +23,20 @@ $(document).ready(function () {
       var imgSrc = $(this).attr('src'); // Get clicked image source
       $('#modalImg').attr('src', imgSrc); // Set modal image source
       $('#imageModal').fadeIn(); // Show modal
+      $('.close').show(); // Show close button
 
       // Activate panzoom on the modal image
       $('#modalImg').panzoom({
           minScale: 1,
-          maxScale: 3, // Allow zooming up to 3x
+          maxScale: 5, // Allow zooming up to 3x
           contain: 'invert' // Allow free movement
       });
   });
 
-  // Close Modal on Click (Outside Image)
+  // Close Modal on Click (Outside Image or Close Button)
   $('#imageModal, .close').click(function () {
-      $('#imageModal').fadeOut(); // Hide modal
+      $('#imageModal').fadeOut(function () {
+          $('.close').hide(); // Hide close button when modal disappears
+      });
   });
 });

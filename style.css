@@ -423,7 +423,7 @@ width: 100%;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    /*background-color: rgba(0, 0, 0, 0.8); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -436,6 +436,7 @@ width: 100%;
     max-height: 90%;
     border-radius: 8px;
     cursor: grab; /* Shows grabbing hand cursor */
+    margin: auto; 
   }
   
   /* Close button */
@@ -443,10 +444,11 @@ width: 100%;
     position: absolute;
     top: 10px;
     right: 20px;
-    color: white;
+    color: cyan;
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
+    display:none;
   }
   
   
