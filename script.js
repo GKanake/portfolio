@@ -73,98 +73,106 @@ $(document).ready(function () {
     observer.observe(this);
   });
 
-  // ==========================================
-  // IMAGE LIGHTBOX / MODAL - EXPAND OVERLAY
-  // ==========================================
-  let isModalAnimating = false;
-  let panzoomInstance = null;
+// ==========================================
+// IMAGE LIGHTBOX / MODAL - EXPAND OVERLAY
+// ==========================================
+let isModalAnimating = false;
+let panzoomInstance = null;
 
-  $('.expandable-image').on('click', function (e) {
-    e.stopPropagation();
-    if (isModalAnimating) return;
+$('.gallery-item').on('click', function (e) {
+  e.stopPropagation();
 
-    const $img = $(this);
-    const imgSrc = $img.attr('src');
-    const caption = $img.closest('.gallery-item').find('.gallery-overlay p').text() || '';
-    const $modal = $('#imageModal');
-    const $modalImg = $('#modalImg');
+  const $item = $(this);
+  const $img = $item.find('.expandable-image');
+  const imgSrc = $img.attr('src');
+  const caption = $item.find('.gallery-overlay p').text() || '';
+  const $modal = $('#imageModal');
+  const $modalImg = $('#modalImg');
 
-    // Set content before opening
-    $modalImg.attr('src', imgSrc);
-    $('.modal-caption').text(caption);
+  // Set content before opening
+  $modalImg.attr('src', imgSrc);
+  $('.modal-caption').text(caption);
 
-    // Trigger CSS expand animation
-    isModalAnimating = true;
-    $modal.addClass('active');
-    $('body').css('overflow', 'hidden');
+  // Trigger CSS expand animation
+  isModalAnimating = true;
+  $modal.addClass('active');
+  $('body').css('overflow', 'hidden');
 
-    // Initialize panzoom only after expand animation finishes
-    setTimeout(() => {
+  // Initialize panzoom safely after transition
+  setTimeout(() => {
+    try {
       if (panzoomInstance) {
         $modalImg.panzoom('destroy');
       }
       $modalImg.css('transform', 'scale(1)');
 
-      panzoomInstance = $modalImg.panzoom({
-        minScale: 1,
-        maxScale: 6,
-        increment: 0.25,
-        contain: 'invert',
-        cursor: 'grab',
-        disablePan: false,
-        disableZoom: false
-      });
-
-      // Mouse wheel zoom support
-      $modalImg.parent().off('mousewheel.focal').on('mousewheel.focal', function(e) {
-        e.preventDefault();
-        const delta = e.delta || e.originalEvent.wheelDelta;
-        const zoomOut = delta ? delta < 0 : e.originalEvent.deltaY > 0;
-        $modalImg.panzoom('zoom', zoomOut, {
-          animate: true,
-          focal: e
+      if ($.fn.panzoom) {
+        panzoomInstance = $modalImg.panzoom({
+          minScale: 1,
+          maxScale: 6,
+          increment: 0.25,
+          contain: 'invert',
+          cursor: 'grab',
+          disablePan: false,
+          disableZoom: false
         });
-      });
 
-      isModalAnimating = false;
-    }, 500);
-  });
-
-  // Close handlers
-  $('.close, .modal-backdrop').on('click', function () {
-    closeModal();
-  });
-
-  $(document).on('keydown', function (e) {
-    if (e.key === 'Escape') closeModal();
-  });
-
-  function closeModal() {
-    if (isModalAnimating) return;
-
-    const $modal = $('#imageModal');
-    const $modalImg = $('#modalImg');
-
-    // Trigger CSS shrink animation
-    $modal.removeClass('active');
-    $('body').css('overflow', '');
-
-    // Clean up panzoom after close animation completes
-    setTimeout(() => {
-      if (panzoomInstance) {
-        $modalImg.panzoom('destroy');
-        panzoomInstance = null;
+        // Mouse wheel zoom support
+        $modalImg.parent().off('mousewheel.focal').on('mousewheel.focal', function(e) {
+          e.preventDefault();
+          const delta = e.delta || e.originalEvent.wheelDelta;
+          const zoomOut = delta ? delta < 0 : e.originalEvent.deltaY > 0;
+          $modalImg.panzoom('zoom', zoomOut, {
+            animate: true,
+            focal: e
+          });
+        });
       }
-      $modalImg.css('transform', '');
-      $modalImg.parent().off('mousewheel.focal');
-      $modalImg.attr('src', ''); // Prevent flash of old image on next open
-    }, 400);
+    } catch (err) {
+      console.warn('Panzoom initialization skipped:', err);
+    } finally {
+      isModalAnimating = false;
+    }
+  }, 400);
+});
+
+// Close handlers using event delegation
+$(document).on('click', '.close, .modal-backdrop', function (e) {
+  e.preventDefault();
+  e.stopPropagation();
+  closeModal();
+});
+
+$(document).on('keydown', function (e) {
+  if (e.key === 'Escape') closeModal();
+});
+
+function closeModal() {
+  const $modal = $('#imageModal');
+  const $modalImg = $('#modalImg');
+
+  // Trigger CSS shrink animation
+  $modal.removeClass('active');
+  $('body').css('overflow', '');
+
+  // Clean up panzoom instance
+  if (panzoomInstance) {
+    try {
+      $modalImg.panzoom('destroy');
+    } catch (err) {}
+    panzoomInstance = null;
   }
 
-  // Prevent closing when clicking the image itself (allow panning)
-  $('.modal-content-wrapper').on('click', function (e) {
-    e.stopPropagation();
-  });
+  $modalImg.css('transform', '');
+  $modalImg.parent().off('mousewheel.focal');
+  $modalImg.attr('src', '');
+  isModalAnimating = false;
+}
+
+// Prevent closing when clicking inside the image container
+$(document).on('click', '.modal-content-wrapper', function (e) {
+  e.stopPropagation();
+});
 
   // ==========================================
   // EASING EXTENSION
