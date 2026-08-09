@@ -1,232 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Kanake's Portfolio</title>
- <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
- <link rel="stylesheet" href="style.css">
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.panzoom/3.2.2/jquery.panzoom.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Geoffrey Kanake - Geospatial Engineer Portfolio. GIS, Remote Sensing, Surveying, and Web Development projects.">
+  <meta name="keywords" content="Geospatial Engineer, GIS, Remote Sensing, Land Surveyor, Nairobi, Kenya">
+  <meta name="author" content="Geoffrey Kanake Gathuri">
+  <title>Geoffrey Kanake | Geospatial Engineer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
- 
- <script src="script.js"></script>
- <!--header starts-->
- <header>
-<div class = "user">
- <img src = "potrait.jpg" alt ="my potrait">
- <h3 class = "name">Geoffrey Kanake</h3>
- <p class="post">Geospatial Engineer</p>
-</div>
-<nav class="navbar">
- <ul>
-  <li><a href = "#home">Home</a></li>
-  <li><a href="#about">About me</a></li>
-  <li><a href="#education">Profession</a></li>
-  <li><a href="#portfolio">Portfolio</a></li>
-  <li><a href="#contact">Contact</a></li>
- </ul>
-</nav>
- </header>
- <!--header ends-->
- <div id = "menu" class = "fas fa-bars"></div>
-<!--home section starts-->
-<section class="home" id = "home">
-<h3>HELLO THERE !</h3>
-<h1>I'M <span>Geoffrey Kanake</span></h1>
-<p>Unleashing the power of spatial intelligence: where data and maps converge! one data point at a time!.</p>
-<a href = "#about"><button class = "btn"><strong>About me</strong><i class="fas fa-user"></i></button></a>
-</section>
-<!--home section ends-->
 
-<!--proffessional profile starts-->
-<section class="Proffessional Profile" id ="about" >
-<h1 class="heading">About<span> me</span></h1>
-<div class = "row">
- <div class = "info">
-  <h3><span>Name: </span> Geoffrey Kanake Gathuri</h3>
-  <!--h3><span>Age: </span>24</h3-->
-  <h3><span> Career:</span>Geospatial Engineer  (Land Surveyor, GIS Specialist, remote sensing specialist,web developer)</h3>
-  <h3><Span>Language:</Span>English, Swahili</h3>
-  <!--<a href = "#"><button class = "btn">Download CV<i class = "fas fa-download"></i></button></a>-->
- </div>
-<div class="counter">
- <div class="box">
-  <span>R.B.C</span>
-  <h3>Engineering Surveyor, 2023 to present.</h3>
- </div>
- <div class = "box">
-  <span>T.u.k, 2023</span>
-  <h3>Bachelor of Engineering Geospatial Engineering, Second-class Upper Division. </h3>
- </div>
- <div class="box">
-  <span>Esri MOOC</span>
-  <h3 style="text-transform: normal;">Spatial Data Science,<br>GIS for Climate Action,<br>Transforming AEC projects with GIS and BIM</h3>
- </div>
-</div>
-</div>
-</section>
-<!--proffessional profile ends-->
-<!--Education section starts-->
-<section class="education" id = "education">
-<h1 class="heading">My<span> Profession</span></h1>
-<div class="box-container">
-  <div class = "box1">
-  <i class = "fs fa-graduation-cap"></i>
-  <span>2024</span>
-  <h3>Engineering Surveyor</h3>
-  <p>Realtime Builders & Contractors, Meru</p>
- </div>
- <div class = "box1">
-  <i class = "fs fa-graduation-cap"></i>
-  <span>2023</span>
-  <h3>B.Eng Geospatial Engineering</h3>
-  <p>Technical Universty, Bachelor's Degree Geospatial Engineering.</p>
- </div>
- <div class="box1">
-  <i class="fs fa-graduation-cap"></i>
-  <span>2017</span>
-  <h3>Computer Studies</h3>
-  <p>Attended Karatina Institute of Technology. graduated with a certificate in Computer Studies.</p></div>
-   <div class="box1">
-    <i class="fs fa-graduation-cap"></i>
-    <span>2016</span>
-    <h3>KNEC KCSE National Examination</h3>
-    <p>Attended Murang'a high school for secondary education. graduated with an A-.</p>
-   </div>
-</div>
-</section>
-<!--Education section ends-->
-<!--Portfolio section starts-->
-<section class = "portfolio" id="portfolio">
-<h1 class="heading">My<span> Portfolio</span></h1>
-<div class="box11">
-  <p class="description">Network Analysis: Shortest walking distance route Map, Nairobi.</p>
-  <iframe src = "https://gkanake.github.io/Route-Network-Analysis/" width = "100%" height = "720">Webmap</iframe>
- </div>
- <br>
-<div class="box11">
-  <p class="description">Interactive WebMap: 3D-Interactive-Population-Density-Map, Kenya.</p>
-  <iframe src = "https://gkanake.github.io/3D-Interactive-Population-Density-Map/" width = "100%" height = "720">Webmap</iframe>
- </div>
- <br>
-<div class="box11">
-   <p class="description">StoryMap: The Changing Waters of Ruko Conservancy, Kenya.</p>
-   <iframe src = "https://arcg.is/1OHWGe0" width = "100%" height = "740">Webmap</iframe>
-  </div>
-  <div class="box11">
-   <p class="description">StoryMap: Tana River county SAR Sentinel 1 flood susceptibility mapping, GEE & Arcgis.</p>
-   <iframe src = "https://arcg.is/1C9TS00" width = "100%" height = "740">Webmap</iframe>
-  </div>
- <div class = "box-container1">
-  <div class="box2">
-    <p class="description">Next Einstein Forum(NEF): SDGs Progress Report 2024, Kenya. </p>
-    <img src="output_SDGs_Tagged.png" alt="image5-1" class="expandable-image">
-   </div>
-   <div class="box2">
-    <p class="description">Spatial Art: Nairobi 3D Buildings. </p>
-    <img src="output_3d_NRB_buildings.png" alt="image5-1" class="expandable-image">
-   </div>
-   <div class="box2">
-    <p class="description">3D Land Use Land Cover 2023, Kenya. </p>
-    <img src="resized_3d_kenya_land_cover_final_with_author.png" alt="image5-1" class="expandable-image">
-   </div>
-   <div class="box2">
-    <p class="description">3D Elevation and Rivers Landscape, Kenya.</p>
-    <img src="kenya_Rivers_Elevation_Map_2.png" alt="image5-1" class="expandable-image">
-</div>
+  <!-- Mobile Menu Toggle -->
+  <div id="menu" class="fas fa-bars" aria-label="Toggle navigation"></div>
 
-<!-- Image Modal -->
-<div id="imageModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modalImg">
-</div>
+  <!-- Header / Sidebar -->
+  <header>
+    <div class="user">
+      <img src="potrait.jpg" alt="Geoffrey Kanake portrait">
+      <h3 class="name">Geoffrey Kanake</h3>
+      <p class="post">Geospatial Engineer</p>
+      <div class="social-links">
+        <a href="mailto:ggeoffreykanake@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/gkanake" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About me</a></li>
+        <li><a href="#education" class="nav-link">Profession</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-   <div class="box2">
-    <p class="description">Bivariate Mapping: Precipitation and Temperature, Kenya. </p>
-    <img src="resized_KE_Temp_PPT_2560.png" alt="image5-1" class="expandable-image">
-   </div>
-   <div class="box2">
-    <p class="description">A Decade of Lake Region Economic Bloc(LREB) Report, 2024. </p>
-    <img src="LREB_All_animation_1920.gif" alt="image5-1" class="expandable-image">
-   </div>
-   <div class="box2">
-    <p class="description">The Changing Waters of Ruko Conservancy:  A Story of Open Water Dynamics (2017–2024). </p>
-    <img src="Ruko_outputs_PP1.gif" alt="image5-1" class="expandable-image">
-   </div>
- <div class="box2">
-   <p class="description">Monitoring Vegetation Induced Road Obstruction Using GIS Technologies. </p>
-   <img src="Monitoring Vegetation Induced Road Obstruction Project Methodology.png" alt="image5-1" class="expandable-image">
-  </div>
- <div class="box2">
-   <p class="description">Spatial analysis in R: Visualizing Precipitation timeseries with vibrant value gradients. </p>
-   <img src="Precipitation_1000dpi_gradient.png" alt="image5-1" class="expandable-image">
- </div>
- <div class="box2">
-   <p class="description">Spatial analysis in R: Correlation between precipitation Timeseries and vegetation areas. </p>
-   <img src="classified-areas-precipitation Trend.png" alt="image5-1" class="expandable-image">
- </div> 
-  <div class="box2">
-   <p class="description">WebMap: Vegetation Induced Road Obstruction Priority map based on monthly reoccurrence. </p>
-   <img src="WebMap.png" alt="image5-1" class="expandable-image">
- </div>
- <div class="box2">
-  <p class="description">Survey: 7 Acres Land subdivision in civil 3D software. </p>
-  <img src="CAD Land Subdivision.png" alt="image6" class="expandable-image">
- </div>
- <div class="box2">
-   <p class="description">Engineering Survey: Nakuru County Olenguruone road mapping and parcel digitization from geo-referenced Registry Index Maps and
-   Preliminary index diagrams. </p>
-   <img src="Topographic Survey.png" alt="image7" class="expandable-image">
- </div>
- <div class="box2">
-   <img src="CAD RIM Digitization.png" alt="image8" class="expandable-image">
- </div>
- <div class="box2">
-   <p class="description">SAR RADAR Data analyis: flooded areas visualization in Tana delta area. </p>
-   <img src="RADAR data.png" alt="IMAGE2" class="expandable-image">
-  </div>
- <div class="box2">
-   <p class="description">ESA SNAP Model builder for automation of Sentinel 1 SAR Data pre- processing.</p>
-   <img src="RADAR data Preprocessing.png" alt="IMAGE3" class="expandable-image">
-  </div>
-  <div class="box2">
-   <p class="description">Geo-processing automation with ArcMap model builder. </p>
-   <img src="Geoprocessing-Automation.png" alt="image5" class="expandable-image">
-   </div>
- <div class="box2">
-  <p class="description">Spatial analyis: Area coverage of secondary schools service reach in Dagoretti North
-  Constituency. </p>
- <img src="Spatial-Analysis-Schools Serving Area.png" alt="IMAGE1" class="expandable-image">
- </div>
- </div>
+  <!-- Main Content -->
+  <main>
+    <!-- Home Section -->
+    <section class="home" id="home">
+      <div class="home-content reveal">
+        <h3>Hello There!</h3>
+        <h1>I'm <span class="highlight">Geoffrey Kanake</span></h1>
+        <p class="tagline">Unleashing the power of spatial intelligence: where data and maps converge, one data point at a time.</p>
+        <a href="#about" class="btn btn-primary">
+          <span>About me</span>
+          <i class="fas fa-user"></i>
+        </a>
+      </div>
+      <div class="scroll-indicator">
+        <span></span>
+      </div>
+    </section>
 
-</section>
-<!--Portfolio section ends-->
-<!--Contact section starts-->
-<section class="contact" id="contact">
-<h1 class="heading"> Contact<span> me</span></h1>
-<div class="row1">
- <div class="content1">
-  <h3 class="title1">Contact info</h3>
-  <div class="info1">
-   <h4><i class="fas fa-envelope"> </i>   ggeoffreykanake@gmail.com</h4>
-  <h3><i class="fas fa-phone"> </i> +254714189145</h3>
- <h3><i class="fas fa-map-marker-alt"> </i> Nairobi, Kenya</h3></div>
- </div>
- <!--form action="">
-<input type="text" placeholder="Enter your name" class ="box4">
-<input type="email" placeholder="Enter your email" class="box4">
-<textarea name="" id=""cols="30" rows="10"class="boxmessage"placeholder="Type a message"></textarea>
-<button type="submit"class="btn1">Send<i class="fas fa-paper-plane"></i></button>
- </form-->
-</div>
-</section>
-<!--Contact section ends-->
-<a href="#home"><p class="description"><button class = "btn">Back to Top</button></p></a>
+    <!-- About Section -->
+    <section class="about" id="about">
+      <h1 class="heading">About <span>me</span></h1>
+      <div class="row">
+        <div class="info reveal-left">
+          <div class="info-card">
+            <h3><span class="label">Name:</span> Geoffrey Kanake Gathuri</h3>
+            <h3><span class="label">Career:</span> Geospatial Engineer (Land Surveyor, GIS Specialist, Remote Sensing Specialist, Web Developer)</h3>
+            <h3><span class="label">Language:</span> English, Swahili</h3>
+          </div>
+        </div>
+        <div class="counter reveal-right">
+          <div class="box">
+            <span class="box-icon"><i class="fas fa-briefcase"></i></span>
+            <span class="box-title">KeRRA</span>
+            <h3>Engineering Surveyor, 2026 to present</h3>
+          </div>
+          <div class="box">
+            <span class="box-icon"><i class="fas fa-briefcase"></i></span>
+            <span class="box-title">R.B.C</span>
+            <h3>Engineering Surveyor, September 2023 to July 2026</h3>
+          </div>
+          <div class="box">
+            <span class="box-icon"><i class="fas fa-graduation-cap"></i></span>
+            <span class="box-title">T.U.K, 2023</span>
+            <h3>Bachelor of Engineering Geospatial Engineering, Second-class Upper Division</h3>
+          </div>
+          <div class="box">
+            <span class="box-icon"><i class="fas fa-certificate"></i></span>
+            <span class="box-title">Esri MOOC</span>
+            <h3>Spatial Data Science, GIS for Climate Action, Transforming AEC projects with GIS and BIM</h3>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Education / Profession Section -->
+    <section class="education" id="education">
+      <h1 class="heading">My <span>Profession</span></h1>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+          <div class="timeline-content">
+            <span class="year">2026</span>
+            <h3>Engineering Surveyor</h3>
+            <p>Kenya Rural Roads Authority,Mikinduri, Meru</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+          <div class="timeline-content">
+            <span class="year">2024</span>
+            <h3>Engineering Surveyor</h3>
+            <p>Realtime Builders & Contractors, Meru</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="timeline-content">
+            <span class="year">2023</span>
+            <h3>B.Eng Geospatial Engineering</h3>
+            <p>Technical University, Bachelor's Degree Geospatial Engineering</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-icon"><i class="fas fa-laptop-code"></i></div>
+          <div class="timeline-content">
+            <span class="year">2017</span>
+            <h3>Computer Studies</h3>
+            <p>Karatina Institute of Technology — Certificate in Computer Studies</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-icon"><i class="fas fa-school"></i></div>
+          <div class="timeline-content">
+            <span class="year">2016</span>
+            <h3>KNEC KCSE National Examination</h3>
+            <p>Murang'a High School — Graduated with an A-</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+      <h1 class="heading">My <span>Portfolio</span></h1>
+      
+      <!-- Web Maps -->
+      <div class="webmaps">
+        <div class="webmap-item reveal">
+          <p class="description">Network Analysis: Shortest walking distance route Map, Nairobi</p>
+          <div class="iframe-container">
+            <iframe src="https://gkanake.github.io/Route-Network-Analysis/" title="Route Network Analysis" loading="lazy"></iframe>
+          </div>
+        </div>
+        <div class="webmap-item reveal">
+          <p class="description">Interactive WebMap: 3D-Interactive-Population-Density-Map, Kenya</p>
+          <div class="iframe-container">
+            <iframe src="https://gkanake.github.io/3D-Interactive-Population-Density-Map/" title="3D Population Density Map" loading="lazy"></iframe>
+          </div>
+        </div>
+        <div class="webmap-item reveal">
+          <p class="description">StoryMap: The Changing Waters of Ruko Conservancy, Kenya</p>
+          <div class="iframe-container">
+            <iframe src="https://arcg.is/1OHWGe0" title="Ruko Conservancy StoryMap" loading="lazy"></iframe>
+          </div>
+        </div>
+        <div class="webmap-item reveal">
+          <p class="description">StoryMap: Tana River County SAR Sentinel-1 Flood Susceptibility Mapping</p>
+          <div class="iframe-container">
+            <iframe src="https://arcg.is/1C9TS00" title="Tana River Flood Mapping" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Gallery -->
+      <div class="gallery">
+        <div class="gallery-item reveal">
+          <div class="gallery-overlay">
+            <p>Olmo Earth Machine Learning - Wetland Delineation, June 2026</p>
+            <span class="zoom-icon"><i class="fas fa-expand"></i></span>
+          </div>
+          <img src="Graphical_abstract.png" alt="Olmo Earth Machine Learning" class="expandable-image" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-overlay">
+            <p>Automating NDVI-Based Crop Health Monitoring, November 2025</p>
+            <span class="zoom-icon"><i class="fas fa-expand"></i></span>
+          </div>
+          <img src="Flowchart.png" alt="Automating NDVI-Based" class="expandable-image" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-overlay">
+            <p>40 Year Hourly Rainfall Intensity Analysis</p>
+            <span class="zoom-icon"><i class="fas fa-expand"></i></span>
+          </div>
+          <img src="00_combined_analysis.png" alt="40 Year Hourly Rainfall Intensity Analysis" class="expandable-image" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-overlay">
+            <p>Next Einstein Forum (NEF): SDGs Progress Report 2024, Kenya</p>
+            <span class="zoom-icon"><i class="fas fa-expand"></i></span>
+          </div>
+          <img src="output_SDGs_Tagged.png" alt="SDGs Progress Report 2024" class="expandable-image" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-overlay">
+            <p>MODIS Data Visualization 2023, Kenya</p>
+            <span class="zoom-icon"><i class="fas fa-expand"></i></span>
+          </div>
+          <img src="combined_MDIS_grid_2560.png" alt="Modis Data Visualization 2023, Kenya" class="expandable-image" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-overlay">
+            <p>Spatial Art: Nairobi 3D Buildings</p>
+            <span class="zoom-icon"><i class="fas fa-expand"></i></span>
+          </div>
+          <img src="output_3d_NRB_buildings.png" alt="Nairobi 3D Buildings" class="expandable-image" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-overlay">
+            <p>3D Land Use Land Cover 2023, Kenya</p>
+            <span class="zoom-icon"><i class="fas fa-expand"></i></span>
+          </div>
+          <img src="resized_3d_kenya_land_cover_final_with_author.png" alt="Kenya 3D Land Cover" class="expandable-image" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-overlay">
+            <p>Tithonia Diversifolia Distribution Map. Nyeri Central, Kenya</p>
+            <span class="zoom-icon"><i class="fas fa-expand"></i></span>
+          </div>
+          <img src="Coordinates-Map.png" alt="Tithonia Diversifolia Distribution Map." class="expandable-image" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-overlay">
+            <p>Bivariate Mapping: Precipitation and Temperature, Kenya</p>
+            <span class="zoom-icon"><i class="fas fa-expand"></i></span>
+          </div>
+          <img src="resized_KE_Temp_PPT_2560.png" alt="Kenya Precipitation and Temperature" class="expandable-image" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-overlay">
+            <p>A Decade of Lake Region Economic Bloc (LREB) Report, 2024</p>
+            <span class="zoom-icon"><i class="fas fa-expand"></i></span>
+          </div>
+          <img src="LREB_All_animation_1920.gif" alt="LREB Report" class="expandable-image" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-overlay">
+            <p>The Changing Waters of Ruko Conservancy (2017–2024)</p>
+            <span class="zoom-icon"><i class="fas fa-expand"></i></span>
+          </div>
+          <img src="Ruko_outputs_PP1.gif" alt="Ruko Conservancy Waters" class="expandable-image" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-overlay">
+            <p>Monitoring Vegetation Induced Road Obstruction Using GIS</p>
+            <span class="zoom-icon"><i class="fas fa-expand"></i></span>
+          </div>
+          <img src="Monitoring Vegetation Induced Road Obstruction Project Methodology.png" alt="Vegetation Road Obstruction" class="expandable-image" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-overlay">
+            <p>Spatial Analysis in R: Precipitation Timeseries</p>
+            <span class="zoom-icon"><i class="fas fa-expand"></i></span>
+          </div>
+          <img src="Precipitation_1000dpi_gradient.png" alt="Precipitation Analysis" class="expandable-image" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-overlay">
+            <p>Spatial Analysis in R: Precipitation vs Vegetation Correlation</p>
+            <span class="zoom-icon"><i class="fas fa-expand"></i></span>
+          </div>
+          <img src="classified-areas-precipitation Trend.png" alt="Precipitation Vegetation Correlation" class="expandable-image" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-overlay">
+            <p>WebMap: Vegetation Induced Road Obstruction Priority Map</p>
+            <span class="zoom-icon"><i class="fas fa-expand"></i></span>
+          </div>
+          <img src="WebMap.png" alt="Road Obstruction Priority Map" class="expandable-image" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-overlay">
+            <p>Survey: 7 Acres Land Subdivision in Civil 3D</p>
+            <span class="zoom-icon"><i class="fas fa-expand"></i></span>
+          </div>
+          <img src="CAD Land Subdivision.png" alt="CAD Land Subdivision" class="expandable-image" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-overlay">
+            <p>Engineering Survey: Olenguruone Road Mapping & Parcel Digitization</p>
+            <span class="zoom-icon"><i class="fas fa-expand"></i></span>
+          </div>
+          <img src="Topographic Survey.png" alt="Topographic Survey" class="expandable-image" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-overlay">
+            <p>CAD RIM Digitization</p>
+            <span class="zoom-icon"><i class="fas fa-expand"></i></span>
+          </div>
+          <img src="CAD RIM Digitization.png" alt="CAD RIM Digitization" class="expandable-image" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-overlay">
+            <p>SAR RADAR Data Analysis: Flooded Areas in Tana Delta</p>
+            <span class="zoom-icon"><i class="fas fa-expand"></i></span>
+          </div>
+          <img src="RADAR data.png" alt="SAR RADAR Flooding" class="expandable-image" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-overlay">
+            <p>ESA SNAP Model Builder: Sentinel-1 SAR Pre-processing</p>
+            <span class="zoom-icon"><i class="fas fa-expand"></i></span>
+          </div>
+          <img src="RADAR data Preprocessing.png" alt="SAR Preprocessing" class="expandable-image" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-overlay">
+            <p>Geoprocessing Automation with ArcMap Model Builder</p>
+            <span class="zoom-icon"><i class="fas fa-expand"></i></span>
+          </div>
+          <img src="Geoprocessing-Automation.png" alt="Geoprocessing Automation" class="expandable-image" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-overlay">
+            <p>Spatial Analysis: Secondary Schools Service Reach in Dagoretti North</p>
+            <span class="zoom-icon"><i class="fas fa-expand"></i></span>
+          </div>
+          <img src="Spatial-Analysis-Schools Serving Area.png" alt="Schools Service Area" class="expandable-image" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <h1 class="heading">Contact <span>me</span></h1>
+      <div class="row">
+        <div class="content reveal-left">
+          <h3 class="title">Contact Info</h3>
+          <div class="info">
+            <h4><i class="fas fa-envelope"></i> ggeoffreykanake@gmail.com</h4>
+            <h3><i class="fas fa-phone"></i> +254 714 189 145</h3>
+            <h3><i class="fas fa-map-marker-alt"></i>  Kenya</h3>
+          </div>
+          <div class="social-links-large">
+            <!--<a href="mailto:ggeoffreykanake@gmail.com" class="social-btn"><i class="fas fa-envelope"></i> Email Me</a> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2026 Geoffrey Kanake.</p>
+      <a href="#home" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+    </footer>
+  </main>
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="modal">
+    <div class="modal-backdrop"></div>
+    <span class="close" aria-label="Close modal">&times;</span>
+    <div class="modal-content-wrapper">
+      <img class="modal-content" id="modalImg" alt="Expanded view">
+      <p class="modal-caption"></p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.panzoom/3.2.2/jquery.panzoom.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
