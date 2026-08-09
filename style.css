@@ -846,7 +846,8 @@ footer i {
   font-size: 4rem;
   font-weight: 300;
   cursor: pointer;
-  z-index: 2003;
+  z-index: 2010; /* Elevated above modal-content-wrapper */
+  pointer-events: auto; /* Guarantees click reception */
   transition: all 0.3s ease;
   width: 5rem;
   height: 5rem;
@@ -854,7 +855,7 @@ footer i {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.12);
   border: 1px solid var(--border);
   opacity: 0;
   transform: scale(0.8);
